@@ -1,0 +1,49 @@
+//MOVING BALLS
+/*MADE BY KRISHNA AGARWAL*/
+#include<iostream.h>
+#include<graphics.h>
+#include<dos.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+    clrscr();
+    int gd=DETECT,gm,i;
+    initgraph(&gd,&gm,"C:\\TC\\BGI");
+    while(!kbhit())
+    {
+        for(i=50;i<getmaxx()-30;i++)
+        {
+            delay(5);
+            cleardevice();
+            setcolor(random(15));
+            circle(i,30,30);
+            setcolor(random(15));
+            circle(i,130,30);
+            setcolor(random(15));
+            circle(i,230,30);
+            setcolor(random(15));
+            circle(i,330,30);
+            setcolor(random(15));
+            circle(i,430,30);
+        }
+        for(i=getmaxx()-30;i>=30;i--)
+        {
+            delay(5);
+            cleardevice();
+            setcolor(random(15));
+            circle(i,30,30);
+            setcolor(random(15));
+            circle(i,130,30);
+            setcolor(random(15));
+            circle(i,230,30);
+            setcolor(random(15));
+            circle(i,330,30);
+            setcolor(random(15));
+            circle(i,430,30);
+        }
+    }
+    getch();
+    closegraph();
+    getch();
+}
